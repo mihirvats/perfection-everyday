@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--
+    =============================================================================
+    PERFECTION EVERYDAY — SITE EDIT GUIDE
+    =============================================================================
+    HOME PAGE (this file): Brand story, services, gallery, overview + links to branches.
+    BRANCH PAGES: One HTML file per salon under /locations/ — duplicate a branch file to add a new salon,
+    then add its link here in (A) the header "Salons" menu and (B) the Locations section cards.
+    ASSETS: ../images/ from branch pages; images/ from this home page.
+    FONTS / COLORS: style.css :root
+    =============================================================================
+  -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- EDIT: meta description -->
+  <meta name="description" content="Perfection Everyday Unisex Salon — hair, skin, and grooming across Ghaziabad and Noida. Book your visit today." />
+  <!-- EDIT: browser tab title -->
+  <title>Perfection Everyday | Unisex Salon — Ghaziabad &amp; Noida</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ========== SECTION: HEADER (edit nav when you add/remove branch pages) ========== -->
+  <header class="site-header" id="top">
+    <div class="header-inner">
+      <!-- EDIT: logo — add <img class="logo-img" src="images/logo.svg" alt="..." /> if you have one -->
+      <a href="index.html" class="logo">Perfection Everyday</a>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#gallery">Gallery</a></li>
+          <!-- EDIT: Add/remove salon links in this dropdown when branch files change -->
+          <li class="nav-item nav-dropdown">
+            <button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-controls="nav-salons-panel-home" id="nav-salons-btn-home">Salons</button>
+            <ul id="nav-salons-panel-home" class="nav-dropdown-panel" role="menu" aria-labelledby="nav-salons-btn-home">
+              <li class="nav-dropdown-label" role="presentation">Ghaziabad</li>
+              <li><a href="locations/ghaziabad-raj-nagar.html" role="menuitem">Raj Nagar</a></li>
+              <li><a href="locations/ghaziabad-vaishali.html" role="menuitem">Vaishali</a></li>
+              <li class="nav-dropdown-label" role="presentation">Noida</li>
+              <li><a href="locations/noida-sector-18.html" role="menuitem">Sector 18</a></li>
+              <li><a href="locations/noida-sector-50.html" role="menuitem">Sector 50</a></li>
+              <li><a href="locations/index.html" role="menuitem">All locations →</a></li>
+            </ul>
+          </li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- ========== END SECTION: HEADER ========== -->
+
+  <!-- ========== SECTION: HERO ========== -->
+  <section class="hero" aria-labelledby="hero-heading">
+    <div class="hero-slider" id="hero-slider" data-slider="hero" data-autoplay="true" data-interval="5500">
+      <!-- EDIT: hero slides — salon interior / team photos -->
+      <div class="hero-slide is-active" data-slide="0">
+        <img src="https://images.unsplash.com/photo-1560066981-9a22391a2cf0?w=1920&q=80" alt="Hair stylist working with a client in a modern salon" loading="eager" fetchpriority="high" />
+        <div class="hero-slide-overlay"></div>
+      </div>
+      <div class="hero-slide" data-slide="1">
+        <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1920&q=80" alt="Bright salon mirrors and styling stations" loading="lazy" />
+        <div class="hero-slide-overlay"></div>
+      </div>
+      <div class="hero-slide" data-slide="2">
+        <img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=1920&q=80" alt="Spa and beauty treatment setting" loading="lazy" />
+        <div class="hero-slide-overlay"></div>
+      </div>
+    </div>
+
+    <div class="hero-content">
+      <!-- EDIT: eyebrow -->
+      <p class="hero-eyebrow">Unisex salon · Ghaziabad &amp; Noida</p>
+      <h1 id="hero-heading">Perfection Everyday</h1>
+      <!-- EDIT: hero paragraph -->
+      <p class="hero-lead">Calm space, skilled stylists, and services for every guest — cut, colour, skin, and grooming under one roof.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="locations/index.html">Find a salon</a>
+        <a class="btn btn-ghost" href="index.html#services">View services</a>
+      </div>
+    </div>
+
+    <div class="hero-controls" role="group" aria-label="Hero image slider">
+      <button type="button" class="slider-btn slider-btn-prev" data-slider-prev="hero" aria-label="Previous slide">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <div class="slider-dots" data-slider-dots="hero"></div>
+      <button type="button" class="slider-btn slider-btn-next" data-slider-next="hero" aria-label="Next slide">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+    </div>
+  </section>
+  <!-- ========== END SECTION: HERO ========== -->
+
+  <main id="main-content">
+    <!-- ========== SECTION: ABOUT ========== -->
+    <section class="section about" id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">About us</span>
+          <h2 id="about-heading">Designed for everyone who walks in</h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-copy">
+            <!-- EDIT: salon story -->
+            <p>Perfection Everyday is a unisex salon built around consistency: hygienic stations, honest consultations, and artists who listen before they pick up the scissors.</p>
+            <p>With salons in Ghaziabad and Noida, we keep the same service standards so your favourite look travels with you across the city.</p>
+            <ul class="about-highlights">
+              <li>Unisex hair, colour, and styling</li>
+              <li>Skin care, waxing, and beard grooming</li>
+              <li>Multiple branches — pick the one closest to you</li>
+            </ul>
+          </div>
+          <figure class="about-media">
+            <img src="https://www.freepik.com/free-photo/hairdresser-taking-care-her-client_23670269.htm#fromView=keyword&page=1&position=9&uuid=3a2c7b7d-58de-4ae9-ae84-09289afac158&query=Salon+reception" alt="Salon team at reception" width="900" height="1100" loading="lazy" />
+            <figcaption class="media-caption">Your visit, start to finish</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+    <!-- ========== END SECTION: ABOUT ========== -->
+
+    <!-- ========== SECTION: LOCATIONS (remove block if you only want dropdown nav) ========== -->
+    <section class="section" id="locations" aria-labelledby="locations-heading">
+      <div class="container">
+        <div class="section-header section-header--center">
+          <span class="section-label">Our salons</span>
+          <h2 id="locations-heading">Choose your <!-- EDIT -->nearest branch</h2>
+          <p class="section-intro">Each page has its own hours, map, and WhatsApp for that location. <!-- EDIT -->Duplicate a file in /locations/ to add a new salon.</p>
+        </div>
+        <div class="locations-split">
+          <div>
+            <h3 class="location-region-title">Ghaziabad</h3>
+            <div class="locations-grid">
+              <!-- EDIT: card links — must match real HTML filenames in /locations/ -->
+              <a class="location-card" href="locations/ghaziabad-raj-nagar.html">
+                <h3>Raj Nagar</h3>
+                <p>Full-service unisex salon — cuts, colour, treatments.</p>
+                <span class="meta">View branch page →</span>
+              </a>
+              <a class="location-card" href="locations/ghaziabad-vaishali.html">
+                <h3>Vaishali</h3>
+                <p>Express grooming plus weekend bridal slots.</p>
+                <span class="meta">View branch page →</span>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h3 class="location-region-title">Noida</h3>
+            <div class="locations-grid">
+              <a class="location-card" href="locations/noida-sector-18.html">
+                <h3>Sector 18</h3>
+                <p>Flagship-style floor, late evenings on request.</p>
+                <span class="meta">View branch page →</span>
+              </a>
+              <a class="location-card" href="locations/noida-sector-50.html">
+                <h3>Sector 50</h3>
+                <p>Neighbourhood salon with family packages.</p>
+                <span class="meta">View branch page →</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <p style="text-align: center; margin-top: 32px;">
+          <a class="btn btn-ghost" href="locations/index.html">See all locations</a>
+        </p>
+      </div>
+    </section>
+    <!-- ========== END SECTION: LOCATIONS ========== -->
+
+    <!-- ========== SECTION: SERVICES ========== -->
+    <section class="section services" id="services" aria-labelledby="services-heading">
+      <div class="container">
+        <div class="section-header section-header--center">
+          <span class="section-label">Services</span>
+          <h2 id="services-heading">What we do best</h2>
+          <!-- EDIT: service intro -->
+          <p class="section-intro">Menus may vary slightly by branch — always check your salon page for add-ons and pricing.</p>
+        </div>
+        <div class="service-cards">
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">01</div>
+            <h3>Hair</h3>
+            <p>Cuts, styling, colour, keratin, and treatments tailored to Indian hair textures.</p>
+            <a href="locations/index.html" class="service-link">Book a branch <span aria-hidden="true">→</span></a>
+          </article>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">02</div>
+            <h3>Skin &amp; wax</h3>
+            <p>Facials, cleanup, waxing, and pre-bridal prep with patch-tested products.</p>
+            <a href="locations/index.html" class="service-link">Book a branch <span aria-hidden="true">→</span></a>
+          </article>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">03</div>
+            <h3>Men’s grooming</h3>
+            <p>Beard design, fades, and relaxing head massage chairs at select locations.</p>
+            <a href="locations/index.html" class="service-link">Book a branch <span aria-hidden="true">→</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- ========== END SECTION: SERVICES ========== -->
+
+    <!-- ========== SECTION: GALLERY ========== -->
+    <section class="section gallery" id="gallery" aria-labelledby="gallery-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Gallery</span>
+          <h2 id="gallery-heading">Inside our <!-- EDIT -->chairs</h2>
+        </div>
+      </div>
+      <div class="gallery-wrap">
+        <div class="gallery-slider" id="gallery-slider" data-slider="gallery" data-autoplay="true" data-interval="4000" role="region" aria-roledescription="carousel" aria-label="Salon gallery">
+          <div class="gallery-slide is-active" data-slide="0">
+            <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=1200&q=80" alt="Hair colouring in progress" loading="lazy" />
+          </div>
+          <div class="gallery-slide" data-slide="1">
+            <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1200&q=80" alt="Barber using clippers" loading="lazy" />
+          </div>
+          <div class="gallery-slide" data-slide="2">
+            <img src="https://images.unsplash.com/photo-1570172619647-dfd03ed5d881?w=1200&q=80" alt="Facial treatment" loading="lazy" />
+          </div>
+          <div class="gallery-slide" data-slide="3">
+            <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=1200&q=80" alt="Nail and hand care" loading="lazy" />
+          </div>
+        </div>
+        <div class="gallery-controls">
+          <button type="button" class="slider-btn" data-slider-prev="gallery" aria-label="Previous gallery image">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <div class="slider-dots slider-dots--light" data-slider-dots="gallery"></div>
+          <button type="button" class="slider-btn" data-slider-next="gallery" aria-label="Next gallery image">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- ========== END SECTION: GALLERY ========== -->
+
+    <!-- ========== SECTION: CONTACT (EDIT: general / HQ details — branch-specific info lives on branch pages) ========== -->
+    <section class="section contact" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-info">
+            <span class="section-label">Contact</span>
+            <h2 id="contact-heading">Talk to <!-- EDIT -->our team</h2>
+            <p class="contact-lead">For branch hours and directions, open the salon page you plan to visit. This line is for <!-- EDIT -->brand enquiries only.</p>
+            <ul class="contact-list">
+              <li>
+                <span class="contact-label">Phone</span>
+                <a href="tel:+919876543210">+91 98765 43210</a>
+              </li>
+              <li>
+                <span class="contact-label">Email</span>
+                <a href="mailto:hello@perfectioneveryday.example">hello@perfectioneveryday.example</a>
+              </li>
+            </ul>
+            <a class="btn btn-whatsapp" href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              WhatsApp (HQ)
+            </a>
+          </div>
+          <div class="contact-map">
+            <!-- EDIT: optional HQ map or remove iframe -->
+            <iframe
+              title="Delhi NCR overview map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224346.48102667316!2d77.06892567431459!3d28.527582306084224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5456ef9d441%3A0x7393bae5c323d1c9!2sGhaziabad%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+              width="600"
+              height="450"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ========== END SECTION: CONTACT ========== -->
+
+    <!-- ========== SECTION: CTA ========== -->
+    <section class="cta-banner" aria-labelledby="cta-heading">
+      <div class="container cta-inner">
+        <div>
+          <h2 id="cta-heading">Book your <!-- EDIT -->next appointment</h2>
+          <p>Pick a branch, message on WhatsApp, or call the desk — we will confirm your slot.</p>
+        </div>
+        <a class="btn btn-primary btn-lg" href="locations/index.html">Choose salon</a>
+      </div>
+    </section>
+    <!-- ========== END SECTION: CTA ========== -->
+  </main>
+
+  <!-- ========== SECTION: FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <p class="footer-brand">Perfection Everyday</p>
+        <p class="footer-tagline">Unisex salons in Ghaziabad &amp; Noida.</p>
+      </div>
+      <div>
+        <p class="footer-heading">Salons</p>
+        <ul class="footer-links">
+          <li><a href="locations/index.html">All locations</a></li>
+          <li><a href="locations/ghaziabad-raj-nagar.html">Ghaziabad — Raj Nagar</a></li>
+          <li><a href="locations/ghaziabad-vaishali.html">Ghaziabad — Vaishali</a></li>
+          <li><a href="locations/noida-sector-18.html">Noida — Sector 18</a></li>
+          <li><a href="locations/noida-sector-50.html">Noida — Sector 50</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-heading">Explore</p>
+        <ul class="footer-links">
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#gallery">Gallery</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; <span id="year"></span> Perfection Everyday. <!-- EDIT -->All rights reserved.</p>
+        <a href="#top" class="back-to-top">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+  <!-- ========== END SECTION: FOOTER ========== -->
+
+  <script src="script.js" defer></script>
+</body>
+</html>
